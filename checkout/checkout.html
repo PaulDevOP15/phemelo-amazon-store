@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <script src="../src/theme.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="order.css" />
+</head>
+<body class="checkout-flow-body">
+  <header class="header">
+    <a href="../index/index.html" id="nav-logo-sprites" class="nav-logo-link nav-progressive-attribute" aria-label="Amazon.co.za" lang="en">
+      <img class="nav-sprite nav-logo-base" src="https://m.media-amazon.com/images/I/61zYzaUw31L.png" alt="" width="164" height="52" decoding="async" />
+      <span id="logo-ext" class="nav-sprite nav-logo-ext nav-progressive-content" aria-hidden="true"></span>
+      <span class="nav-logo-locale">.co.za</span>
+    </a>
+    <nav class="header_nav" aria-label="Checkout navigation">
+      <a href="../cart/cart.html" class="header_link">
+        <div class="header_option">
+          <span class="header_optionOne">Basket</span>
+          <span class="header_optionTwo">Review</span>
+        </div>
+      </a>
+      <button type="button" class="theme_toggle" aria-pressed="false">
+        <i class="fa-solid fa-moon theme_toggle_icon_dark" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun theme_toggle_icon_light" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="checkout_flow_page">
+    <h1>Checkout</h1>
+    <div class="checkout_flow_layout">
+      <div class="checkout_flow_main">
+        <form id="checkout-form" action="#" method="post" novalidate>
+          <div class="checkout_ship_card">
+            <h2>Shipping details</h2>
+            <div class="shipping_grid">
+              <div class="shipping_field shipping_field--full">
+                <label for="checkout-full-name"> Full name<input id="checkout-full-name" type="text" name="fullName" required autocomplete="name" /></label>
+              </div>
+              <div class="shipping_field shipping_field--full">
+                <label for="checkout-email"> Email<input id="checkout-email" type="email" name="email" required autocomplete="email" /></label>
+              </div>
+              <div class="shipping_field shipping_field--full">
+                <label for="checkout-address"> Street address<input id="checkout-address" type="text" name="address" required autocomplete="street-address" /></label>
+              </div>
+              <div class="shipping_field">
+                <label for="checkout-city"> City<input id="checkout-city" type="text" name="city" required autocomplete="address-level2" /></label>
+              </div>
+              <div class="shipping_field">
+                <label for="checkout-postal"> Postal code<input id="checkout-postal" type="text" name="postalCode" required autocomplete="postal-code" /></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout_ship_card">
+            <h2>Delivery options</h2>
+            <ul class="delivery_choice_list">
+              <li>
+                <label class="delivery_choice">
+                  <input class="delivery_radio" type="radio" name="deliveryOption" value="standard" checked />
+                  <span>
+                    <p class="delivery_choice_title">Standard delivery</p>
+                    <p class="delivery_choice_desc">Arrives within 5–7 business days. Free on this demo storefront.</p>
+                  </span>
+                </label>
+              </li>
+              <li>
+                <label class="delivery_choice">
+                  <input class="delivery_radio" type="radio" name="deliveryOption" value="express" />
+                  <span>
+                    <p class="delivery_choice_title">Express delivery</p>
+                    <p class="delivery_choice_desc">Arrives within 2 business days.</p>
+                  </span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+
+      <aside class="sidebar_summary" aria-labelledby="checkout-summary-heading">
+        <h2 id="checkout-summary-heading">Order summary</h2>
+        <ul class="order_summary_lines" id="checkout-order-lines"></ul>
+        <div class="order_summary_totals_row">
+          <span id="checkout-summary-count">Items (0)</span>
+          <span id="checkout-summary-total">$0.00</span>
+        </div>
+        <button type="submit" class="place_order_btn" id="place-order-btn" form="checkout-form">Place Order</button>
+        <p class="empty_message" style="margin-top: 12px;">No payment is processed.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../src/products.js"></script>
+  <script src="../src/cart.js"></script>
+  <script src="../src/checkoutFlow.js"></script>
+</body>
+</html>
