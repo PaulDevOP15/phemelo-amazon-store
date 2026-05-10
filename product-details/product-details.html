@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+  <script src="../src/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+  <header class="header">
+    <a
+      href="../index/index.html"
+      id="nav-logo-sprites"
+      class="nav-logo-link nav-progressive-attribute"
+      aria-label="Amazon.co.za"
+      lang="en"
+    >
+      <img
+        class="nav-sprite nav-logo-base"
+        src="https://m.media-amazon.com/images/I/61zYzaUw31L.png"
+        alt=""
+        width="164"
+        height="52"
+        decoding="async"
+      />
+      <span id="logo-ext" class="nav-sprite nav-logo-ext nav-progressive-content" aria-hidden="true"></span>
+      <span class="nav-logo-locale">.co.za</span>
+    </a>
+    <div class="header_search">
+      <input class="header_input" type="text" placeholder="Search Amazon products" />
+      <i class="fa-solid fa-magnifying-glass search_icon" aria-hidden="true"></i>
+    </div>
+    <nav class="header_nav" aria-label="Main navigation">
+      <a href="../login/login.html" class="header_link">
+        <div class="header_option">
+          <span class="header_optionOne">Hello Guest</span>
+          <span class="header_optionTwo">Sign In</span>
+        </div>
+      </a>
+      <a href="../wishlist/wishlist.html" class="header_link" aria-label="Wishlist">
+        <div class="header_option">
+          <span class="header_optionOne">Your</span>
+          <span class="header_optionTwo header_wishlist_label"><i class="fa-regular fa-heart" aria-hidden="true"></i> List</span>
+        </div>
+      </a>
+      <a href="../cart/cart.html" class="header_link header_optionBasket" aria-label="Go to cart">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+        <span class="header_optionTwo header_basketCount">0</span>
+      </a>
+      <button type="button" class="theme_toggle" aria-pressed="false">
+        <i class="fa-solid fa-moon theme_toggle_icon_dark" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun theme_toggle_icon_light" aria-hidden="true"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="product_details" id="product-details"></main>
+
+  <script src="../src/products.js"></script>
+  <script src="../src/cart.js"></script>
+  <script src="../src/wishlist.js"></script>
+  <script src="../src/app.js"></script>
+</body>
+</html>
