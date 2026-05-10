@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <script src="../src/theme.js"></script>
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="loginPage.css" />
+</head>
+<body>
+  <div class="login_top_bar" role="region" aria-label="Appearance">
+    <span class="login_theme_hint">Display</span>
+    <button type="button" class="theme_toggle" aria-pressed="false">
+      <i class="fa-solid fa-moon theme_toggle_icon_dark" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun theme_toggle_icon_light" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <main class="login">
+    <a href="../index/index.html">
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/53/ShoppingPortal/logo._TTD_.png"
+        alt="Amazon Logo"
+        class="login_logo"
+      />
+    </a>
+
+    <section class="login_container" aria-label="Sign in form">
+      <h1>Sign-In</h1>
+
+      <form id="login-form">
+        <h5>E-mail</h5>
+        <input id="email" type="email" required />
+
+        <h5>Password</h5>
+        <input id="password" type="password" required minlength="6" />
+
+        <button type="submit" class="login_signIn_button">
+          Sign In
+        </button>
+      </form>
+
+      <p>
+        By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale.
+      </p>
+
+      <button class="login_registerButton" id="create-account">
+        Create your Amazon Account
+      </button>
+    </section>
+  </main>
+
+  <script src="../src/auth.js"></script>
+</body>
+</html>
