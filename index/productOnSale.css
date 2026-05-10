@@ -1,0 +1,15 @@
+.product_on_sale {
+  position: relative;
+}
+
+.sale_badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #cc0c39;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
